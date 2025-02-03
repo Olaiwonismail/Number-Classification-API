@@ -6,13 +6,6 @@ app= Flask(__name__)
 
 CORS(app)
 
-def is_number(s):
-    try:
-        float(s)  # Can handle negatives and decimals
-        return True
-    except ValueError:
-        return False
-
 def is_prime(num):
     if num < 2:
         return False
@@ -68,7 +61,7 @@ def fun_fact(num):
 def home():
     # number=371
     number = request.args.get('number')
-    if not is_number(number):
+    if not number.isnumeric():
         return jsonify({
                         "number": "alphabet",
                         "error": True
