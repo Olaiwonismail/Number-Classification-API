@@ -24,6 +24,7 @@ def is_perfect(num):
 
 
 def is_armstrong(num):
+    num = abs(num)
     digits = list(map(int, str(num)))
     power = len(digits)
     return sum(d ** power for d in digits) == num
@@ -43,6 +44,8 @@ def get_properties(num):
     return properties    
 
 def digital_sum(num):
+    num = abs(num)
+    
     sum = 0
     list_of_num = list(str(num))
     for x in list_of_num:
@@ -61,11 +64,12 @@ def fun_fact(num):
 def home():
     # number=371
     number = request.args.get('number')
-    if not number.isnumeric():
+    if not number.lstrip('-').isdigit():  # Allow negative numbers
         return jsonify({
-                        "number": "alphabet",
-                        "error": True
-                        }), 400
+            "number": number,
+            "error": True
+        }), 400
+
     number = int(number)
     return jsonify({
         "number": number,
