@@ -16,7 +16,7 @@ The **Number Classification API** is a simple RESTful API that takes a number as
 - **Python** (Flask)
 - **Flask-CORS** for handling cross-origin requests
 - **Requests** library for fetching fun facts
-- **Deployed on:** [Your Hosting Platform]
+- **Deployed on:** Render
 
 ## API Endpoint
 ### **GET /api/classify-number?number=371**
