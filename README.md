@@ -1,5 +1,5 @@
-"# HNG12-STAGE-1" 
-# Number Classification API
+ 
+# Number Classification API (HNG12-INTERNSHIP-STAGE-1)
 
 ## Overview
 The **Number Classification API** is a simple RESTful API that takes a number as input and returns interesting mathematical properties about it, along with a fun fact.
